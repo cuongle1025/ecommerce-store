@@ -1,21 +1,26 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { addToCart } from '../features/Cart/cartSlice';
+import React from 'react'
+import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { addToCart } from '../features/Cart/cartSlice'
 
 interface ProductCardProps {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
+  id: number
+  name: string
+  price: number
+  description: string
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ id, name, price, description }) => {
-  const dispatch = useDispatch();
+const ProductCard: React.FC<ProductCardProps> = ({
+  id,
+  name,
+  price,
+  description,
+}) => {
+  const dispatch = useDispatch()
 
   const handleAddToCart = () => {
-    dispatch(addToCart({ id, name, price, quantity: 1 }));
-  };
+    dispatch(addToCart({ id, name, price, quantity: 1 }))
+  }
 
   return (
     <div className="border rounded-lg p-4 shadow-md">
@@ -34,7 +39,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ id, name, price, description 
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductCard;
+export default ProductCard

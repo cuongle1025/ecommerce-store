@@ -1,21 +1,24 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../app/store';
-import { removeFromCart, updateQuantity } from '../features/Cart/cartSlice';
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { RootState } from '../app/store'
+import { removeFromCart, updateQuantity } from '../features/Cart/cartSlice'
 
 const CartPage: React.FC = () => {
-  const dispatch = useDispatch();
-  const cartItems = useSelector((state: RootState) => state.cart.items);
+  const dispatch = useDispatch()
+  const cartItems = useSelector((state: RootState) => state.cart.items)
 
   const handleRemoveItem = (id: number) => {
-    dispatch(removeFromCart(id));
-  };
+    dispatch(removeFromCart(id))
+  }
 
   const handleUpdateQuantity = (id: number, quantity: number) => {
-    dispatch(updateQuantity({ id, quantity }));
-  };
+    dispatch(updateQuantity({ id, quantity }))
+  }
 
-  const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const total = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  )
 
   return (
     <div>
@@ -25,8 +28,11 @@ const CartPage: React.FC = () => {
       ) : (
         <>
           <ul className="space-y-4">
-            {cartItems.map(item => (
-              <li key={item.id} className="flex justify-between items-center border-b pb-4">
+            {cartItems.map((item) => (
+              <li
+                key={item.id}
+                className="flex justify-between items-center border-b pb-4"
+              >
                 <div>
                   <h2 className="text-xl">{item.name}</h2>
                   <p>${item.price.toFixed(2)}</p>
@@ -36,7 +42,9 @@ const CartPage: React.FC = () => {
                     type="number"
                     min="1"
                     value={item.quantity}
-                    onChange={(e) => handleUpdateQuantity(item.id, Number(e.target.value))}
+                    onChange={(e) =>
+                      handleUpdateQuantity(item.id, Number(e.target.value))
+                    }
                     className="w-16 p-1 border rounded"
                   />
                   <button
@@ -58,7 +66,7 @@ const CartPage: React.FC = () => {
         </>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default CartPage;
+export default CartPage

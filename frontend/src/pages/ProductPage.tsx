@@ -1,21 +1,28 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../app/store';
-import { addToCart } from '../features/Cart/cartSlice';
+import React from 'react'
+import { useParams } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { RootState } from '../app/store'
+import { addToCart } from '../features/Cart/cartSlice'
 
 const ProductPage: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
-  const dispatch = useDispatch();
-  const product = useSelector((state: RootState) => 
-    state.products.items.find(item => item.id === Number(id))
-  );
+  const { id } = useParams<{ id: string }>()
+  const dispatch = useDispatch()
+  const product = useSelector((state: RootState) =>
+    state.products.items.find((item) => item.id === Number(id)),
+  )
 
-  if (!product) return <div>Product not found</div>;
+  if (!product) return <div>Product not found</div>
 
   const handleAddToCart = () => {
-    dispatch(addToCart({ id: product.id, name: product.name, price: product.price, quantity: 1 }));
-  };
+    dispatch(
+      addToCart({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        quantity: 1,
+      }),
+    )
+  }
 
   return (
     <div>
@@ -29,7 +36,7 @@ const ProductPage: React.FC = () => {
         Add to Cart
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default ProductPage;
+export default ProductPage

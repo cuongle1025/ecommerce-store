@@ -1,10 +1,10 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import ProductPage from './pages/ProductPage';
-import CartPage from './pages/CartPage';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import HomePage from './pages/HomePage'
+import ProductPage from './pages/ProductPage'
+import CartPage from './pages/CartPage'
 
 const App: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const App: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
