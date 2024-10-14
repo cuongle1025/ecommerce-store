@@ -9,10 +9,10 @@ const Header: React.FC = () => {
   )
 
   return (
-    <header className="bg-gray-800 text-white p-4">
+    <header className="bg-secondary-blue text-primary p-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold">
-          E-Commerce Store
+            3legant.
         </Link>
         <nav>
           <ul className="flex space-x-4">
