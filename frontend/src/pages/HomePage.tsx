@@ -16,26 +16,26 @@ const HomePage: React.FC = () => {
     error,
   } = useSelector((state: RootState) => state.products)
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      dispatch(setLoading(true))
-      try {
-        // Replace this with your actual API call
-        const response = await fetch('https://api.example.com/products')
-        const data = await response.json()
-        dispatch(setProducts(data))
-      } catch (err) {
-        dispatch(setError('Failed to fetch products: ' + err))
-      } finally {
-        dispatch(setLoading(false))
-      }
-    }
+//   useEffect(() => {
+//     const fetchProducts = async () => {
+//       dispatch(setLoading(true))
+//       try {
+//         // Replace this with your actual API call
+//         const response = await fetch('https://api.example.com/products')
+//         const data = await response.json()
+//         dispatch(setProducts(data))
+//       } catch (err) {
+//         dispatch(setError('Failed to fetch products: ' + err))
+//       } finally {
+//         dispatch(setLoading(false))
+//       }
+//     }
 
-    fetchProducts()
-  }, [dispatch])
+//     fetchProducts()
+//   }, [dispatch])
 
-  if (loading) return <div>Loading...</div>
-  if (error) return <div>Error: {error}</div>
+//   if (loading) return <div>Loading...</div>
+//   if (error) return <div>Error: {error}</div>
 
   return (
     <div>
