@@ -21,15 +21,15 @@ const App: React.FC = () => {
   }, [location.pathname]);
   
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/shop" element={<ProductPage />} />
-        <Route path="/product/:id" element={<ProductPage />} />
-        <Route path="/contact-us" element={<ProductPage />} />
-        <Route path="/cart" element={<CartPage />} />
-      </Route>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/shop" element={<ProductPage />} />
+          <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/contact-us" element={<ProductPage />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Route>
+      </Routes>
   )
 }
 

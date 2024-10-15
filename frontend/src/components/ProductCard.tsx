@@ -10,12 +10,12 @@ interface ProductCardProps {
   description: string
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({
+export default function ProductCard({
   id,
   name,
   price,
   description,
-}) => {
+}: ProductCardProps) {
   const dispatch = useDispatch()
 
   const handleAddToCart = () => {
@@ -41,5 +41,3 @@ const ProductCard: React.FC<ProductCardProps> = ({
     </div>
   )
 }
-
-export default ProductCard
