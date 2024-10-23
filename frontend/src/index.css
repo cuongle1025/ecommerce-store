@@ -16,3 +16,22 @@ body {
 footer{
   margin-top: auto;
 }
+
+/* width */
+
+#product-carousel::-webkit-scrollbar {
+  width: 1rem;
+  height: 0.25rem;
+}
+
+/* Track */
+
+#product-carousel::-webkit-scrollbar-track {
+  background: #e8ecef;
+}
+
+/* Handle */
+
+#product-carousel::-webkit-scrollbar-thumb {
+  background: #343839;
+}

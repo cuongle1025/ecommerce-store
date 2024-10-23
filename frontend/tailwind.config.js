@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-require-imports */
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme')
 
@@ -8,6 +10,14 @@ module.exports = {
     'node_modules/preline/dist/*.js',
   ],
   theme: {
+    screens: {
+      xs: '480px',
+      ss: '620px',
+      sm: '768px',
+      md: '1060px',
+      lg: '1200px',
+      xl: '1700px',
+    },
     extend: {
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans],
