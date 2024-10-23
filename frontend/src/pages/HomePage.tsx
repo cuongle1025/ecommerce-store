@@ -8,7 +8,9 @@ import React from 'react'
 // } from '../features/Products/productsSlice'
 import Carousel from '../components/Carousel/Carousel'
 import CategoryBanner from '../components/CategoryBanner/CategoryBanner'
-// import ProductCard from '../components/ProductCard'
+import UnderlineButton from '../components/UnderlineButton/UnderlineButton'
+import ProductCarousel from '../components/Product/ProductCarousel'
+import FeaturesBanner from '../components/FeaturesBanner/FeaturesBanner'
 
 const HomePage: React.FC = () => {
   //   const dispatch = useDispatch()
@@ -48,7 +50,7 @@ const HomePage: React.FC = () => {
           <ProductCard key={product.id} {...product} />
         ))}
       </div> */}
-      <div className="flex flex-col my-[40px]">
+      <section className="flex flex-col my-[40px]">
         <div className="grid grid-cols-3 gap-6 items-center">
           <div className="font-medium text-7xl text-neutral-700 col-span-2">
             Simply Unique <span className="text-neutral-400">/</span> <br />
@@ -59,8 +61,24 @@ const HomePage: React.FC = () => {
             decorations store based in HCMC, Vietnam. Est since 2019.
           </p>
         </div>
-      </div>
-      <CategoryBanner />
+      </section>
+      <section>
+        <CategoryBanner />
+      </section>
+      <section className="flex flex-col my-[48px]">
+        <div className="grid grid-cols-2">
+          <h3 className="font-medium text-[40px] leading-none tracking-wide">
+            New <br /> Arrivals
+          </h3>
+          <div className="flex items-end justify-end">
+            <UnderlineButton text={'More Products'} />
+          </div>
+        </div>
+        <ProductCarousel />
+      </section>
+      <section>
+        <FeaturesBanner />
+      </section>
     </>
   )
 }

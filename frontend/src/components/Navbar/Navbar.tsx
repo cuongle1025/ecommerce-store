@@ -28,7 +28,7 @@ export default function Navbar() {
   ]
 
   return (
-    <header className="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white px-80 py-4">
+    <header className="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white px-80 py-4 sticky top-0 z-[100]">
       <nav className="w-full mx-auto sm:flex sm:items-center sm:justify-between">
         <a
           className="flex font-medium text-2xl text-black focus:outline-none focus:opacity-80 "
