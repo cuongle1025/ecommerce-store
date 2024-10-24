@@ -7,10 +7,11 @@ import React from 'react'
 //   setError,
 // } from '../features/Products/productsSlice'
 import Carousel from '../components/Carousel/Carousel'
-import CategoryBanner from '../components/CategoryBanner/CategoryBanner'
-import UnderlineButton from '../components/UnderlineButton/UnderlineButton'
+import CategoryBanner from '../components/Banners/CategoryBanner'
+import UnderlineButton from '../components/Buttons/UnderlineButton'
 import ProductCarousel from '../components/Product/ProductCarousel'
-import FeaturesBanner from '../components/FeaturesBanner/FeaturesBanner'
+import FeaturesBanner from '../components/Banners/FeaturesBanner'
+import SalesBanner from '../components/Banners/SalesBanner'
 
 const HomePage: React.FC = () => {
   //   const dispatch = useDispatch()
@@ -78,6 +79,9 @@ const HomePage: React.FC = () => {
       </section>
       <section>
         <FeaturesBanner />
+      </section>
+      <section className="-mx-10 md:-mx-20 lg:-mx-40 xl:-mx-80">
+        <SalesBanner />
       </section>
     </>
   )

@@ -1,7 +1,7 @@
 import BedroomBanner from '../../assets/images/BedroomBanner.png'
 import KitchenBanner from '../../assets/images/KitchenBanner.png'
 import LivingRoomBanner from '../../assets/images/LivingRoomBanner.png'
-import UnderlineButton from '../UnderlineButton/UnderlineButton'
+import UnderlineButton from '../Buttons/UnderlineButton'
 
 export default function CategoryBanner() {
   return (
