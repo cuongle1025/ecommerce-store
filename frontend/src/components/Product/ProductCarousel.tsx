@@ -51,7 +51,7 @@ export default function ProductCarousel() {
     >
       <div
         id="product-carousel"
-        className="hs-carousel relative overflow-x-scroll overscroll-contain overflow-hidden w-full min-h-[481px]"
+        className="hs-carousel relative overflow-x-scroll overscroll-x-contain overflow-hidden w-full min-h-[481px]"
       >
         <div className="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-1000 opacity-0">
           {productInfos.map((product, i) => (

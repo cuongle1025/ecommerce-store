@@ -27,7 +27,7 @@ export default function FeaturesBanner() {
     },
   ]
   return (
-    <div className="flex flex-col flex-wrap min-h-[316px]">
+    <div className="flex flex-col flex-wrap mb-12">
       <div className="grid grid-cols-4 min-h-[220px] gap-6">
         {features.map((feature, i) => (
           <div
