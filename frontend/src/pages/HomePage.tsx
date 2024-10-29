@@ -8,10 +8,14 @@ import React from 'react'
 // } from '../features/Products/productsSlice'
 import Carousel from '../components/Carousel/Carousel'
 import CategoryBanner from '../components/Banners/CategoryBanner'
-import UnderlineButton from '../components/Buttons/UnderlineButton'
-import ProductCarousel from '../components/Product/ProductCarousel'
-import FeaturesBanner from '../components/Banners/FeaturesBanner'
-import SalesBanner from '../components/Banners/SalesBanner'
+import UnderlineButton from '../components/Buttons/UnderlinedButton'
+import ProductCarousel from '../components/Products/ProductCarousel'
+import FeatureBanner from '../components/Banners/FeatureBanner'
+import SaleBanner from '../components/Banners/SaleBanner'
+import ArticleCard from '../components/Articles/ArticleCard'
+import article1 from '../assets/images/article1.png'
+import article2 from '../assets/images/article2.png'
+import article3 from '../assets/images/article3.png'
 
 const HomePage: React.FC = () => {
   //   const dispatch = useDispatch()
@@ -42,9 +46,26 @@ const HomePage: React.FC = () => {
   //   if (loading) return <div>Loading...</div>
   //   if (error) return <div>Error: {error}</div>
 
+  const articles = [
+    {
+      coverImg: article1,
+      title: '7 ways to decor your home',
+    },
+    {
+      coverImg: article2,
+      title: 'Kitchen organization',
+    },
+    {
+      coverImg: article3,
+      title: 'Decor your bedroom',
+    },
+  ]
+
   return (
     <>
-      <Carousel />
+      <section>
+        <Carousel />
+      </section>
       {/* <h1 className="text-3xl font-bold mb-6">Our Products</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product) => (
@@ -78,10 +99,30 @@ const HomePage: React.FC = () => {
         <ProductCarousel />
       </section>
       <section>
-        <FeaturesBanner />
+        <FeatureBanner />
       </section>
       <section className="-mx-10 md:-mx-20 lg:-mx-40 xl:-mx-80">
-        <SalesBanner />
+        <SaleBanner />
+      </section>
+      <section className="flex flex-col min-h-[657px] py-20 gap-10">
+        <div className="grid grid-cols-2">
+          <h3 className="font-medium text-[40px] leading-none tracking-wide">
+            Articles
+          </h3>
+          <div className="flex items-end justify-end">
+            <UnderlineButton text={'More Articles'} />
+          </div>
+        </div>
+        <div className="grid grid-cols-3 gap-6">
+          {articles.map((article, i) => (
+            <ArticleCard
+              key={i}
+              coverImg={article.coverImg}
+              title={article.title}
+              readButton
+            />
+          ))}
+        </div>
       </section>
     </>
   )
