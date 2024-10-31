@@ -1,5 +1,5 @@
 import SaleBannerCover from '../../assets/images/SaleBannerCover.png'
-import UnderlineButton from '../Buttons/UnderlinedButton'
+import UnderlineButton from '../Buttons/UnderlineButton'
 
 export default function SaleBanner() {
   return (

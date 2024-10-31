@@ -8,7 +8,7 @@ import React from 'react'
 // } from '../features/Products/productsSlice'
 import Carousel from '../components/Carousel/Carousel'
 import CategoryBanner from '../components/Banners/CategoryBanner'
-import UnderlineButton from '../components/Buttons/UnderlinedButton'
+import UnderlineButton from '../components/Buttons/UnderlineButton'
 import ProductCarousel from '../components/Products/ProductCarousel'
 import FeatureBanner from '../components/Banners/FeatureBanner'
 import SaleBanner from '../components/Banners/SaleBanner'
@@ -16,6 +16,7 @@ import ArticleCard from '../components/Articles/ArticleCard'
 import article1 from '../assets/images/article1.png'
 import article2 from '../assets/images/article2.png'
 import article3 from '../assets/images/article3.png'
+import NewsletterBanner from '../components/Banners/NewsletterBanner'
 
 const HomePage: React.FC = () => {
   //   const dispatch = useDispatch()
@@ -123,6 +124,9 @@ const HomePage: React.FC = () => {
             />
           ))}
         </div>
+      </section>
+      <section className="-mx-10 md:-mx-20 lg:-mx-40 xl:-mx-80">
+        <NewsletterBanner />
       </section>
     </>
   )
