@@ -4,6 +4,7 @@ import 'preline/preline'
 import { IStaticMethods } from 'preline/preline'
 import Layout from './components/Layout/Layout'
 import HomePage from './pages/HomePage'
+import ShopPage from './pages/ShopPage'
 import ProductPage from './pages/ProductPage'
 import CartPage from './pages/CartPage'
 
@@ -24,7 +25,7 @@ const App: React.FC = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/shop" element={<ProductPage />} />
+        <Route path="/shop" element={<ShopPage />} />
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/contact-us" element={<ProductPage />} />
         <Route path="/cart" element={<CartPage />} />

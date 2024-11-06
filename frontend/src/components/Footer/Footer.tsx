@@ -62,7 +62,7 @@ export default function Footer() {
             Terms of Use
           </a>
         </div>
-        <div className="flex justify-end gap-6">
+        <div className="flex justify-end items-center gap-6">
           <a href="https://www.linkedin.com/in/cuong-le-407083179/">
             <img
               src={LinkedinIcon}
