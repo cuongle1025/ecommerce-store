@@ -1,6 +1,3 @@
-import StarRoundedIcon from '@mui/icons-material/StarRounded'
-import StarOutlineRoundedIcon from '@mui/icons-material/StarOutlineRounded'
-
 export default function ReviewFilter() {
   return (
     <>
