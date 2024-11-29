@@ -4,6 +4,7 @@ import iconFilter from '../assets/icons/iconFilter.svg'
 import ProductSort from '../components/Products/ProductSort'
 import ProductGrid from '../components/Products/ProductGrid'
 import NewsletterBanner from '../components/Banners/NewsletterBanner'
+import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
 
 const ShopPage: React.FC = () => {
   const prices = [
@@ -23,36 +24,7 @@ const ShopPage: React.FC = () => {
           }}
           className="min-h-[392px] flex flex-col gap-6 justify-center items-center bg-cover bg-center bg-no-repeat"
         >
-          <ol className="flex items-center whitespace-nowrap">
-            <li className="inline-flex items-center">
-              <a
-                className="flex items-center text-sm text-neutral-400 hover:text-neutral-700 focus:outline-none focus:text-neutral-700"
-                href="/"
-              >
-                Home
-              </a>
-              <svg
-                className="shrink-0 mx-2 size-4 text-gray-400 dark:text-neutral-600"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="m9 18 6-6-6-6"></path>
-              </svg>
-            </li>
-            <li
-              className="inline-flex items-center text-sm font-semibold text-neutral-700 truncate"
-              aria-current="page"
-            >
-              Shop
-            </li>
-          </ol>
+          <Breadcrumb itemsList={['Home', 'Shop']} />
           <h2 className="font-medium text-5xl text-black tracking-wide">
             Shop Page
           </h2>

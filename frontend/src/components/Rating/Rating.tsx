@@ -17,7 +17,7 @@ const StyledRating = styled(Rating)({
 
 export default function CustomizedRating({ readOnly }: Props) {
   return (
-    <Box sx={{ '& > legend': { mt: 2 } }}>
+    <Box sx={{ '& > legend': { mt: 2 } }} className="flex items-center">
       <StyledRating
         name="star-rating"
         defaultValue={2}
