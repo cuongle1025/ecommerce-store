@@ -6,7 +6,7 @@ import React from 'react'
 //   setLoading,
 //   setError,
 // } from '../features/Products/productsSlice'
-import Carousel from '../components/Carousel/Carousel'
+import BannerCarousel from '../components/Carousel/BannerCarousel'
 import CategoryBanner from '../components/Banners/CategoryBanner'
 import UnderlineButton from '../components/Buttons/UnderlineButton'
 import ProductCarousel from '../components/Products/ProductCarousel'
@@ -65,7 +65,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <section>
-        <Carousel />
+        <BannerCarousel />
       </section>
       {/* <h1 className="text-3xl font-bold mb-6">Our Products</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

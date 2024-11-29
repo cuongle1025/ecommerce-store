@@ -3,7 +3,6 @@
 import { Link } from 'react-router-dom'
 // import { addToCart } from '../../features/Cart/cartSlice'
 import PrimaryButton from '../Buttons/PrimaryButton'
-import IconButton from '../Buttons/IconButton'
 import Badge from '../Badge/Badge'
 import Rating from '../Rating/Rating'
 import iconHeart from '../../assets/icons/iconHeart.svg'
@@ -44,7 +43,12 @@ export default function ProductCard({ id, name, price }: Props) {
                 />
               </div>
               <div className="flex justify-end">
-                <IconButton icon={iconHeart} />
+                <button
+                  type="button"
+                  className="w-8 h-8 p-1.5 rounded-[32px] justify-center items-center gap-2.5 inline-flex hover:bg-neutral-200 focus:outline-none focus:bg-neutral-200"
+                >
+                  <img src={iconHeart} alt="icon" />
+                </button>
               </div>
             </div>
             <div className="hidden flex-col group-hover:flex">

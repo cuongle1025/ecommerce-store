@@ -4,7 +4,7 @@ import banner3 from '../../assets/images/banner3.png'
 import iconArrowLeft from '../../assets/icons/iconArrowLeft.svg'
 import iconArrowRight from '../../assets/icons/iconArrowRight.svg'
 
-export default function Carousel() {
+export default function BannerCarousel() {
   const carouselSlides = [
     {
       src: banner1,
