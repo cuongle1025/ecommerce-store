@@ -16,7 +16,7 @@ export default function SaleBanner() {
           It&apos;s more affordable than ever to give every room in your home a
           stylish makeover
         </p>
-        <UnderlineButton text={'Shop Now'} />
+        <UnderlineButton text={'Shop Now'} icon />
       </div>
     </div>
   )

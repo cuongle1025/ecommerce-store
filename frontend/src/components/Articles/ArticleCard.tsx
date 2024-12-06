@@ -16,7 +16,7 @@ export default function ArticleCard({ coverImg, title, readButton }: Props) {
       />
       <span className="flex flex-col gap-2">
         <p className="text-xl tracking-wide font-medium">{title}</p>
-        {readButton && <UnderlineButton text={'Read More'} />}
+        {readButton && <UnderlineButton text={'Read More'} icon />}
       </span>
     </div>
   )

@@ -6,7 +6,7 @@ export default function ProductDetailsDrawer() {
   return (
     <div
       id="hs-offcanvas-right"
-      className="hs-overlay hs-overlay-open:translate-x-0 hidden translate-x-full fixed top-0 end-0 transition-all duration-300 transform h-full rounded-l-lg max-w-md w-full z-[101] bg-white border-s"
+      className="hs-overlay hs-overlay-open:translate-x-0 hidden translate-x-full fixed top-0 end-0 transition-all duration-300 transform h-full max-w-md w-full z-[101] bg-white border-s"
       role="dialog"
       tabIndex={-1}
       aria-labelledby="hs-offcanvas-right-label"

@@ -9,21 +9,19 @@ export default function Navbar() {
   //   state.cart.items.reduce((total, item) => total + item.quantity, 0),
   // )
 
-  const functionIcons = [
+  const functionButtons = [
     {
-      link: 'https://github.com/',
-      src: iconSearch,
+      icon: iconSearch,
       alt: 'Search',
     },
     {
-      link: 'https://www.linkedin.com/in/',
-      src: iconUserCircle,
+      icon: iconUserCircle,
       alt: 'UserCircle',
     },
     {
-      link: 'https://www.linkedin.com/in/',
-      src: iconShoppingBag,
+      icon: iconShoppingBag,
       alt: 'ShoppingBag',
+      id: '#cart-drawer',
     },
   ]
 
@@ -66,15 +64,15 @@ export default function Navbar() {
         </div>
         <div className="flex flex-row">
           <ul className="flex justify-center gap-4">
-            {functionIcons.map((icon, i) => (
+            {functionButtons.map((button, i) => (
               <li key={i}>
-                <a href={icon.link} target="_blank" rel="noreferrer">
+                <button type="button" data-hs-overlay={button.id}>
                   <img
-                    src={icon.src}
-                    alt={icon.alt}
+                    src={button.icon}
+                    alt={button.alt}
                     className="w-6 hover:cursor-pointer hover:drop-shadow-[0_0_5px_hsl(0,0%,40%)]"
                   />
-                </a>
+                </button>
               </li>
             ))}
           </ul>
