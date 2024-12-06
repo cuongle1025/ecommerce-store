@@ -25,7 +25,7 @@ export default function BannerCarousel() {
       data-hs-carousel='{
         "loadingClasses": "opacity-0",
         "dotsItemClasses": "hs-carousel-active:w-[30px] transition-all duration-300 ease-in-out size-3 bg-neutral-100 rounded-full cursor-pointer",
-        "isAutoPlay": false,
+        "isAutoPlay": true,
         "isInfiniteLoop": true
     }'
       className="relative"

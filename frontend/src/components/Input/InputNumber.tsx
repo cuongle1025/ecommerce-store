@@ -1,17 +1,17 @@
-// interface Props {
-//   text: string
-// }
+interface Props {
+  small?: boolean
+}
 
-export default function InputNumber() {
+export default function InputNumber({ small }: Props) {
   return (
     <div
-      className="py-2 px-3 flex w-fit bg-neutral-200 rounded-lg"
+      className={`${small ? 'p-1' : 'py-2 px-3'} flex w-fit bg-neutral-200 rounded-lg`}
       data-hs-input-number=""
     >
       <div className="flex items-center gap-x-1.5">
         <button
           type="button"
-          className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+          className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50"
           tabIndex={-1}
           aria-label="Decrease"
           data-hs-input-number-decrement=""
@@ -32,7 +32,7 @@ export default function InputNumber() {
           </svg>
         </button>
         <input
-          className="p-0 w-6 bg-transparent border-0 text-gray-800 font-semibold text-center focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none dark:text-white"
+          className={`p-0 w-6 bg-transparent border-0 ${small && 'text-sm'} text-gray-800 text-center focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none`}
           style={{ MozAppearance: 'textfield' }}
           type="number"
           aria-roledescription="Number field"
@@ -41,7 +41,7 @@ export default function InputNumber() {
         />
         <button
           type="button"
-          className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+          className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50"
           tabIndex={-1}
           aria-label="Increase"
           data-hs-input-number-increment=""
