@@ -19,19 +19,19 @@ footer{
 
 /* width */
 
-#product-carousel::-webkit-scrollbar,#cart-items-list::-webkit-scrollbar {
+#product-carousel::-webkit-scrollbar,#cart-items-list::-webkit-scrollbar,#order-complete-list::-webkit-scrollbar {
   width: 0.25rem;
   height: 0.25rem;
 }
 
 /* Track */
 
-#product-carousel::-webkit-scrollbar-track,#cart-items-list::-webkit-scrollbar-track {
+#product-carousel::-webkit-scrollbar-track,#cart-items-list::-webkit-scrollbar-track,#order-complete-list::-webkit-scrollbar-track {
   background: #e8ecef;
 }
 
 /* Handle */
 
-#product-carousel::-webkit-scrollbar-thumb,#cart-items-list::-webkit-scrollbar-thumb {
+#product-carousel::-webkit-scrollbar-thumb,#cart-items-list::-webkit-scrollbar-thumb,#order-complete-list::-webkit-scrollbar-thumb {
   background: #343839;
 }

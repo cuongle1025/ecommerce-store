@@ -17,7 +17,6 @@ import article1 from '../assets/images/article1.png'
 import article2 from '../assets/images/article2.png'
 import article3 from '../assets/images/article3.png'
 import NewsletterBanner from '../components/Banners/NewsletterBanner'
-import CartDrawer from '../components/Cart/CartDrawer'
 
 const HomePage: React.FC = () => {
   //   const dispatch = useDispatch()
@@ -65,9 +64,6 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <section>
-        <CartDrawer />
-      </section>
       <section>
         <BannerCarousel />
       </section>
