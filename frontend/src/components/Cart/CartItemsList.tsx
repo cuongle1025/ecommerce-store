@@ -7,8 +7,8 @@ export default function CartItemsList() {
     <div>
       {Array.from({ length: 10 }, (_, index) => (
         <>
-          <div className="flex gap-4 mx-6" key={index}>
-            <div className="bg-[#F3F5F7]">
+          <div className="flex gap-4 mx-3" key={index}>
+            <div className="bg-[#F3F5F7] shrink-0">
               <img src={bowlM} className="w-20 h-24 object-contain" />
             </div>
             <div className="flex flex-col justify-between">

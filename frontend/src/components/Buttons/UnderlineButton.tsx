@@ -4,14 +4,16 @@ interface Props {
   text: string
   icon?: boolean
   small?: boolean
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
-export default function UnderlineButton({ text, icon, small }: Props) {
+export default function UnderlineButton({ text, icon, small, onClick }: Props) {
   return (
     <div className="flex flex-col">
       <button
         type="button"
         className={`inline-flex w-fit items-center gap-x-1 ${small ? 'text-sm' : 'text-base'} text-neutral-700 hover:text-neutral-400 focus:outline-none focus:text-neutral-400 border-b border-neutral-700`}
+        onClick={onClick}
       >
         {text}
         {icon && (
