@@ -13,9 +13,7 @@ const createNew = async (req, res, next) => {
       .status(StatusCodes.CREATED)
       .json({ message: 'POST: API create product controller' })
   } catch (error) {
-    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
-      errors: error.message,
-    })
+    next(error)
   }
 }
 
