@@ -1,4 +1,5 @@
 import { StatusCodes } from 'http-status-codes'
+import { productService } from '~/services/productService'
 
 const createNew = async (req, res, next) => {
   try {
@@ -6,12 +7,11 @@ const createNew = async (req, res, next) => {
     console.log('req/query', req.query)
     console.log('req/params', req.params)
 
-    // Move data to Service
+    // Transfer data to Service
+    const createProduct = await productService.createNew(req.body)
 
-    // Return data to Client
-    res
-      .status(StatusCodes.CREATED)
-      .json({ message: 'POST: API create product controller' })
+    // Return result to Client
+    res.status(StatusCodes.CREATED).json(createProduct)
   } catch (error) {
     next(error)
   }
