@@ -1,5 +1,4 @@
 import { MongoClient, ServerApiVersion } from 'mongodb'
-import { mongo } from 'mongoose'
 import { env } from '~/config/environment'
 
 let ecommerceDBInstance = null
