@@ -6,6 +6,10 @@ const createNew = async (req, res, next) => {
   const correctCondition = Joi.object({
     name: Joi.string().required().min(3).max(50).trim().strict(),
     description: Joi.string().required().min(3).max(256).trim().strict(),
+    price: Joi.number().precision(2).positive().required(),
+    ratings: Joi.number().integer().min(1).max(5).required(),
+    quantity: Joi.number().integer().min(0).required(),
+    category: Joi.string().required(),
   })
 
   try {

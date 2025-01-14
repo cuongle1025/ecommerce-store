@@ -17,4 +17,19 @@ const createNew = async (req, res, next) => {
   }
 }
 
-export const productController = { createNew }
+const getDetails = async (req, res, next) => {
+  try {
+    console.log('req/params', req.params)
+    const productId = req.params.id
+
+    // Transfer data to Service
+    const product = await productService.getDetails(productId)
+
+    // Return result to Client
+    res.status(StatusCodes.OK).json(product)
+  } catch (error) {
+    next(error)
+  }
+}
+
+export const productController = { createNew, getDetails }
