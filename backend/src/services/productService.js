@@ -1,6 +1,8 @@
 /* eslint-disable no-useless-catch */
 import { slugify } from '~/utils/formatters'
 import { productModel } from '~/models/productModel'
+import ApiError from '~/utils/ApiError'
+import { StatusCodes } from 'http-status-codes'
 
 const createNew = async (reqBody) => {
   try {
@@ -25,4 +27,16 @@ const createNew = async (reqBody) => {
   }
 }
 
-export const productService = { createNew }
+const getDetails = async (boardId) => {
+  try {
+    const product = await productModel.getDetails(boardId)
+    if (!product) {
+      throw new ApiError(StatusCodes.NOT_FOUND, 'Product not found!')
+    }
+    return product
+  } catch (error) {
+    throw error
+  }
+}
+
+export const productService = { createNew, getDetails }
